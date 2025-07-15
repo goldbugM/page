@@ -1,0 +1,87 @@
+.spotlight-card {
+  position: relative;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 182, 193, 0.2);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 182, 193, 0.05));
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  transition: all var(--animation-duration, 0.5s) ease;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  --spotlight-color: rgba(255, 182, 193, 0.15);
+  --spotlight-size: 300px;
+  --hover-opacity: 0.8;
+  --animation-duration: 0.5s;
+}
+
+.spotlight-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle var(--spotlight-size) at var(--mouse-x) var(--mouse-y), 
+    var(--spotlight-color), 
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity var(--animation-duration) ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.spotlight-card:hover::before,
+.spotlight-card:focus-within::before {
+  opacity: var(--hover-opacity);
+}
+
+.spotlight-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 10px 25px rgba(255, 182, 193, 0.2),
+    0 0 0 1px rgba(255, 182, 193, 0.3);
+}
+
+/* Ensure content stays above the spotlight effect */
+.spotlight-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Beauty spa specific styling */
+.spotlight-card.beauty-service {
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.98), 
+    rgba(255, 182, 193, 0.08)
+  );
+  border: 1px solid rgba(255, 182, 193, 0.25);
+}
+
+.spotlight-card.beauty-service:hover {
+  border-color: rgba(255, 182, 193, 0.4);
+  box-shadow: 
+    0 15px 35px rgba(255, 182, 193, 0.25),
+    0 0 0 1px rgba(255, 182, 193, 0.35);
+}
+
+/* Featured service variant */
+.spotlight-card.featured {
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.95), 
+    rgba(255, 182, 193, 0.12)
+  );
+  border: 2px solid rgba(255, 182, 193, 0.3);
+}
+
+.spotlight-card.featured::before {
+  --spotlight-color: rgba(255, 182, 193, 0.2);
+}
+
+.spotlight-card.featured:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 20px 40px rgba(255, 182, 193, 0.3),
+    0 0 0 2px rgba(255, 182, 193, 0.4);
+}

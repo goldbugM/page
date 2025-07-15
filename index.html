@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://maps.gstatic.com;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      font-src 'self' https://fonts.gstatic.com;
+      img-src 'self' data: https: blob:;
+      frame-src 'self' https://www.google.com https://maps.google.com;
+      connect-src 'self' https://maps.googleapis.com https://formspree.io;
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self' https://formspree.io;
+    ">
+
+    <title>Hafida's Beauty Room | Luxuriöse Aquafacial-Behandlungen in Frankfurt</title>
+    <meta name="description" content="Professionelle Hautpflegebehandlungen und Aquafacial-Therapie im Herzen von Frankfurt. Erleben Sie transformative Schönheitsbehandlungen in luxuriöser Atmosphäre." />
+    <meta name="author" content="Hafida's Beauty Room" />
+    <!-- Apple's San Francisco font system will be used via CSS font-family stack -->
+
+    <meta property="og:title" content="Hafida's Beauty Room | Luxuriöse Hautpflege Frankfurt" />
+    <meta property="og:description" content="Professionelle Aquafacial-Behandlungen und Hautpflege in Frankfurt am Main" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

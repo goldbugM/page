@@ -1,0 +1,102 @@
+.animated-gradient-text {
+  position: relative;
+  display: inline-block;
+}
+
+.text-content {
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation var(--animation-duration, 8s) linear infinite;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background-size: 200% auto;
+  border-radius: inherit;
+  z-index: -1;
+  animation: gradient-animation var(--animation-duration, 8s) linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Beauty spa specific styling */
+.animated-gradient-text.beauty-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.animated-gradient-text.beauty-title .text-content {
+  background-image: linear-gradient(
+    45deg,
+    #FFB6C1 0%,
+    #FF69B4 25%,
+    #FF1493 50%,
+    #FF69B4 75%,
+    #FFB6C1 100%
+  );
+  background-size: 300% auto;
+  animation-duration: 6s;
+}
+
+/* Subtle variant for smaller headings */
+.animated-gradient-text.beauty-subtitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+}
+
+.animated-gradient-text.beauty-subtitle .text-content {
+  background-image: linear-gradient(
+    90deg,
+    #FFB6C1 0%,
+    #FF69B4 50%,
+    #FFB6C1 100%
+  );
+  background-size: 200% auto;
+  animation-duration: 4s;
+}
+
+/* Elegant variant with rose gold */
+.animated-gradient-text.rose-gold {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+}
+
+.animated-gradient-text.rose-gold .text-content {
+  background-image: linear-gradient(
+    135deg,
+    #E8B4B8 0%,
+    #D4A574 25%,
+    #C9A96E 50%,
+    #D4A574 75%,
+    #E8B4B8 100%
+  );
+  background-size: 250% auto;
+  animation-duration: 8s;
+}
+
+/* Pause animation on hover for better readability */
+.animated-gradient-text:hover .text-content,
+.animated-gradient-text:hover .gradient-overlay {
+  animation-play-state: paused;
+}

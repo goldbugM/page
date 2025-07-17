@@ -19,22 +19,13 @@ const GooeyNav = ({
 
   const noise = (n = 1) => n / 2 - Math.random() * n;
 
-  const getXY = (
-    distance,
-    pointIndex,
-    totalPoints
-  ) => {
+  const getXY = (distance, pointIndex, totalPoints) => {
     const angle =
       ((360 + noise(8)) / totalPoints) * pointIndex * (Math.PI / 180);
     return [distance * Math.cos(angle), distance * Math.sin(angle)];
   };
 
-  const createParticle = (
-    i,
-    t,
-    d,
-    r
-  ) => {
+  const createParticle = (i, t, d, r) => {
     let rotate = noise(r / 10);
     return {
       start: getXY(d[0], particleCount - i, particleCount),
@@ -42,7 +33,8 @@ const GooeyNav = ({
       time: t,
       scale: 1 + noise(0.2),
       color: colors[Math.floor(Math.random() * colors.length)],
-      rotate: rotate > 0 ? (rotate + r / 20) * 10 : (rotate - r / 20) * 10,
+      rotate:
+        rotate > 0 ? (rotate + r / 20) * 10 : (rotate - r / 20) * 10,
     };
   };
 
@@ -67,7 +59,10 @@ const GooeyNav = ({
         particle.style.setProperty("--end-y", `${p.end[1]}px`);
         particle.style.setProperty("--time", `${p.time}ms`);
         particle.style.setProperty("--scale", `${p.scale}`);
-        particle.style.setProperty("--color", `var(--color-${p.color}, white)`);
+        particle.style.setProperty(
+          "--color",
+          `var(--color-${p.color}, white)`
+        );
         particle.style.setProperty("--rotate", `${p.rotate}deg`);
 
         point.classList.add("point");
@@ -88,7 +83,8 @@ const GooeyNav = ({
   };
 
   const updateEffectPosition = (element) => {
-    if (!containerRef.current || !filterRef.current || !textRef.current) return;
+    if (!containerRef.current || !filterRef.current || !textRef.current)
+      return;
     const containerRect = containerRef.current.getBoundingClientRect();
     const pos = element.getBoundingClientRect();
 
@@ -132,28 +128,22 @@ const GooeyNav = ({
       e.preventDefault();
       const liEl = e.currentTarget.parentElement;
       if (liEl) {
-        handleClick(
-          { currentTarget: liEl },
-          index
-        );
+        handleClick({ currentTarget: liEl }, index);
       }
     }
   };
 
   useEffect(() => {
     if (!navRef.current || !containerRef.current) return;
-    const activeLi = navRef.current.querySelectorAll("li")[
-      activeIndex
-    ];
+    const activeLi = navRef.current.querySelectorAll("li")[activeIndex];
     if (activeLi) {
       updateEffectPosition(activeLi);
       textRef.current?.classList.add("active");
     }
 
     const resizeObserver = new ResizeObserver(() => {
-      const currentActiveLi = navRef.current?.querySelectorAll("li")[
-        activeIndex
-      ];
+      const currentActiveLi =
+        navRef.current?.querySelectorAll("li")[activeIndex];
       if (currentActiveLi) {
         updateEffectPosition(currentActiveLi);
       }
@@ -171,9 +161,12 @@ const GooeyNav = ({
             <li
               key={index}
               className={activeIndex === index ? "active" : ""}
-              onClick={(e) => handleClick(e, index)}
             >
-              <a href={item.href} onKeyDown={(e) => handleKeyDown(e, index)}>
+              <a
+                href={item.href}
+                onClick={(e) => handleClick(e, index)}
+                onKeyDown={(e) => handleKeyDown(e, index)}
+              >
                 {item.label}
               </a>
             </li>

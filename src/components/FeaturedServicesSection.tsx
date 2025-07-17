@@ -8,7 +8,7 @@ export const FeaturedServicesSection = () => {
       id: "aquafacial",
       title: "Aquafacial Behandlung",
       description: "Moderne Hydra-Dermabrasion für strahlende und gesunde Haut. Diese innovative Behandlung reinigt, peelt und hydratisiert Ihre Haut in einem einzigen Schritt.",
-      image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/images/Galllery_Treatment section images/Aquafacial Gallery.png",
       price: "89 €",
       duration: "60 Min.",
       rating: 5,
@@ -19,7 +19,7 @@ export const FeaturedServicesSection = () => {
       id: "microneedling",
       title: "Microneedling Anti-Aging",
       description: "Professionelle Microneedling-Behandlung zur Hauterneuerung und Faltenreduktion. Inklusive hochwertiger Wirkstoff-Ampulle und beruhigender Maske.",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/images/Galllery_Treatment section images/Microneedling Gallery.png",
       price: "99 €",
       duration: "60 Min.",
       rating: 5,
@@ -30,7 +30,7 @@ export const FeaturedServicesSection = () => {
       id: "braut-makeup",
       title: "Braut Make-up",
       description: "Perfektes Make-up für Ihren besonderen Tag. Individuell abgestimmt auf Ihren Typ und Ihre Wünsche für einen unvergesslichen Auftritt.",
-      image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/images/Galllery_Treatment section images/Makeup Gallery.png",
       price: "89 €",
       duration: "90 Min.",
       rating: 5,
@@ -41,7 +41,7 @@ export const FeaturedServicesSection = () => {
       id: "gesichtsbehandlung",
       title: "Klassische Gesichtsbehandlung",
       description: "Individuelle Hautpflege nach Ihren Bedürfnissen. Tiefenreinigung, Peeling und intensive Pflege für alle Hauttypen.",
-      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/images/Galllery_Treatment section images/Facial Treatment Gallery.webp",
       price: "65 €",
       duration: "60 Min.",
       rating: 4,
@@ -50,7 +50,7 @@ export const FeaturedServicesSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-primary/5 to-white">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Content */}

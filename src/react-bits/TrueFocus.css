@@ -1,0 +1,48 @@
+.focus-container {
+  position: relative;
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.focus-word {
+  display: inline-block;
+  margin-right: 0.5em;
+  cursor: pointer;
+  transition: filter 0.5s ease;
+  position: relative;
+}
+
+.focus-word:last-child {
+  margin-right: 0;
+}
+
+.focus-word.manual:hover {
+  filter: blur(0px) !important;
+}
+
+.focus-border {
+  position: absolute;
+  border: 2px solid var(--border-color, #E91E63);
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+/* Beauty spa specific styling */
+.focus-container.beauty-title .focus-word {
+  color: #E91E63;
+  font-weight: bold;
+}
+
+.focus-container.beauty-subtitle .focus-word {
+  color: #666;
+  font-weight: 500;
+}
+
+.focus-container.beauty-description .focus-word {
+  color: #333;
+  font-weight: normal;
+}

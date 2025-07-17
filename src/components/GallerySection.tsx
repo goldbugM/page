@@ -22,7 +22,7 @@ export const GallerySection = () => {
   const galleryItems = [
     {
       id: "aquafacial",
-      src: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/Galllery_Treatment section images/Aquafacial Gallery.png",
       alt: "Aquafacial Behandlung - Moderne Hydra-Dermabrasion",
       title: "Aquafacial Behandlung",
       category: "Gesichtsbehandlung",
@@ -32,7 +32,7 @@ export const GallerySection = () => {
     },
     {
       id: "microneedling",
-      src: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/Galllery_Treatment section images/Microneedling Gallery.png",
       alt: "Microneedling Anti-Aging Behandlung",
       title: "Microneedling",
       category: "Anti-Aging",
@@ -42,7 +42,7 @@ export const GallerySection = () => {
     },
     {
       id: "gesichtsbehandlung",
-      src: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/Galllery_Treatment section images/Facial Treatment Gallery.webp",
       alt: "Klassische Gesichtsbehandlung",
       title: "Gesichtsbehandlung",
       category: "Hautpflege",
@@ -52,7 +52,7 @@ export const GallerySection = () => {
     },
     {
       id: "makeup",
-      src: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/Galllery_Treatment section images/Makeup Gallery.png",
       alt: "Professionelles Make-up",
       title: "Make-up",
       category: "Make-up",
@@ -62,7 +62,7 @@ export const GallerySection = () => {
     },
     {
       id: "hautberatung",
-      src: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/Galllery_Treatment section images/Skin Consultation Gallery.png",
       alt: "Hautanalyse und Beratung",
       title: "Hautberatung",
       category: "Beratung",
@@ -72,7 +72,7 @@ export const GallerySection = () => {
     },
     {
       id: "schminkkurs",
-      src: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/Galllery_Treatment section images/Makeup Course Gallery.png",
       alt: "Schminkkurs - Lernen Sie professionelle Techniken",
       title: "Schminkkurs",
       category: "Kurse",
@@ -83,14 +83,14 @@ export const GallerySection = () => {
   ];
 
   return (
-    <section id="gallery" className="py-12 bg-gradient-to-b from-white to-primary/5">
+    <section id="gallery" className="py-12 bg-white">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-10">
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
             <GradientText
               className="beauty-title"
-              colors={["#E91E63", "#EC407A", "#F06292", "#F8BBD9", "#F5DEB3", "#DEB887"]}
+              colors={["#E91E63", "#F06292", "#FFB6C1", "#F8BBD9", "#F5DEB3", "#DEB887"]}
               animationSpeed={8}
             >
               Meine Spezialisierungen
@@ -127,7 +127,7 @@ export const GallerySection = () => {
                   element.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="bg-gradient-to-r from-primary to-accent text-white hover:shadow-lg px-8 py-3 rounded-apple text-apple-headline transition-all duration-300 hover:-translate-y-1"
+              className="bg-gradient-to-br from-primary/95 via-accent/90 to-secondary/85 text-white hover:shadow-lg px-8 py-3 rounded-apple text-apple-headline transition-all duration-300 hover:-translate-y-1 border border-white/30"
             >
               Beratungstermin vereinbaren
             </button>
@@ -138,7 +138,7 @@ export const GallerySection = () => {
                   element.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-apple text-apple-headline transition-all duration-300 hover:-translate-y-1"
+              className="border-2 border-white/50 text-white hover:bg-white/20 hover:text-white px-8 py-3 rounded-apple text-apple-headline transition-all duration-300 hover:-translate-y-1 bg-white/10"
             >
               Alle Services ansehen
             </button>

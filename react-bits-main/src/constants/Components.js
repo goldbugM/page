@@ -41,6 +41,7 @@ const textAnimations = {
   'text-cursor': () => import("../demo/TextAnimations/TextCursorDemo"),
   'scramble-text': () => import("../demo/TextAnimations/ScrambledTextDemo"),
   'text-trail': () => import("../demo/TextAnimations/TextTrailDemo"),
+  'curved-loop': () => import("../demo/TextAnimations/CurvedLoopDemo"),
 };
 
 const components = {
@@ -72,6 +73,8 @@ const components = {
   'model-viewer': () => import("../demo/Components/ModelViewerDemo"),
   'fluid-glass': () => import("../demo/Components/FluidGlassDemo"),
   'masonry': () => import("../demo/Components/MasonryDemo"),
+  'magic-bento': () => import("../demo/Components/MagicBentoDemo"),
+  'scroll-stack': () => import("../demo/Components/ScrollStackDemo"),
 };
 
 const backgrounds = {
@@ -94,7 +97,8 @@ const backgrounds = {
   'dither': () => import("../demo/Backgrounds/DitherDemo"),
   'lightning': () => import("../demo/Backgrounds/LightningDemo"),
   'dot-grid': () => import("../demo/Backgrounds/DotGridDemo"),
-  'beams': () => import("../demo/Backgrounds/BeamsDemo")
+  'beams': () => import("../demo/Backgrounds/BeamsDemo"),
+  'ripple-grid': () => import("../demo/Backgrounds/RippleGridDemo"),
 };
 
 export const componentMap = {

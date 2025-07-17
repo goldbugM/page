@@ -9,6 +9,7 @@ export const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedService, setSelectedService] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState<Set<string>>(new Set());
 
   const openServiceModal = (serviceId: string) => {
     setSelectedService(serviceId);
@@ -26,7 +27,7 @@ export const HeroSection = () => {
       title: "Aquafacial Behandlung",
       subtitle: "HAFIDAS BEAUTYROOM",
       description: "Moderne Aquafacial-Treatments für strahlende Haut",
-      image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: "/images/hero_section/aquafacial%20tretment.png",
       link: "treatments"
     },
     {
@@ -34,7 +35,7 @@ export const HeroSection = () => {
       title: "Microneedling",
       subtitle: "HAFIDAS BEAUTYROOM",
       description: "Professionelle Hauterneuerung und Faltenreduktion",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      image: "/images/hero_section/Microneedeling.png",
       link: "treatments"
     },
     {
@@ -42,23 +43,23 @@ export const HeroSection = () => {
       title: "Gesichtsbehandlungen",
       subtitle: "HAFIDAS BEAUTYROOM",
       description: "Professionelle Gesichtsbehandlungen für jeden Hauttyp",
-      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: "/images/hero_section/Facial%20Treatments.png",
       link: "treatments"
     },
     {
       id: "makeup",
-      title: "Make-up & Schminkkurse",
+      title: "Make-up & Styling",
       subtitle: "HAFIDAS BEAUTYROOM",
-      description: "Typgerechtes Make-up und persönliche Schminkkurse",
-      image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80",
+      description: "Typgerechtes Make-up und persönliche Beratung",
+      image: "/images/hero_section/Professional%20Makeup.png",
       link: "treatments"
     },
     {
-      id: "hautpflege",
+      id: "hautberatung",
       title: "Hautberatung",
       subtitle: "HAFIDAS BEAUTYROOM",
       description: "Professionelle Hautanalyse mit Pflegeempfehlungen",
-      image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      image: "/images/hero_section/Skin%20Consultation.png",
       link: "treatments"
     },
     {
@@ -66,12 +67,19 @@ export const HeroSection = () => {
       title: "Schminkkurse",
       subtitle: "HAFIDAS BEAUTYROOM",
       description: "Lernen Sie professionelle Schminktechniken",
-      image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      image: "/images/hero_section/Makeup%20Courses.png",
       link: "treatments"
     }
   ];
 
   useEffect(() => {
+    // Preload all images
+    services.forEach(service => {
+      const img = new Image();
+      img.src = service.image;
+      console.log(`Preloading: ${service.title} - ${service.image}`);
+    });
+
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % services.length);
     }, 5000);
@@ -110,9 +118,23 @@ export const HeroSection = () => {
             }`}
           >
             {/* Background Image */}
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${service.image})` }}
+            <img
+              src={service.image}
+              alt={service.title}
+              className={`absolute inset-0 w-full h-full object-cover ${
+                service.id === 'microneedling' ? 'object-top' :
+                service.id === 'schminkkurse' ? 'object-top' :
+                'object-center'
+              }`}
+              loading="eager"
+              onLoad={() => {
+                console.log(`✅ Loaded: ${service.title}`);
+                setImagesLoaded(prev => new Set([...prev, service.id]));
+              }}
+              onError={(e) => {
+                console.error(`❌ Failed to load: ${service.title}`, e);
+                console.log(`Image path: ${service.image}`);
+              }}
             />
 
             {/* Overlay */}

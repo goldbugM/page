@@ -6,6 +6,12 @@ import { SpotlightCard } from "./SpotlightCard";
 import { GlareHover } from "./GlareHover";
 import { GradientText } from "./GradientText";
 import { MasonryGallery } from "./MasonryGallery";
+import BlurText from "../react-bits/BlurText";
+import ShinyText from "../react-bits/ShinyText";
+import GlareHoverEffect from "../react-bits/GlareHover";
+import Magnet from "../react-bits/Magnet";
+import RotatingText from "../react-bits/RotatingText";
+import CountUp from "../react-bits/CountUp";
 
 export const TreatmentsSection = () => {
   const [selectedService, setSelectedService] = useState<string | null>(null);
@@ -25,7 +31,7 @@ export const TreatmentsSection = () => {
   const galleryItems = [
     {
       id: "aquafacial",
-      src: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/Galllery_Treatment section images/Aquafacial Gallery.png",
       alt: "Aquafacial Behandlung - Moderne Hydra-Dermabrasion",
       title: "Aquafacial Behandlung",
       category: "Gesichtsbehandlung",
@@ -35,7 +41,7 @@ export const TreatmentsSection = () => {
     },
     {
       id: "microneedling",
-      src: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/Galllery_Treatment section images/Microneedling Gallery.png",
       alt: "Microneedling Anti-Aging Behandlung",
       title: "Microneedling",
       category: "Anti-Aging",
@@ -45,7 +51,7 @@ export const TreatmentsSection = () => {
     },
     {
       id: "gesichtsbehandlung",
-      src: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/Galllery_Treatment section images/Facial Treatment Gallery.webp",
       alt: "Klassische Gesichtsbehandlung",
       title: "Gesichtsbehandlung",
       category: "Hautpflege",
@@ -55,7 +61,7 @@ export const TreatmentsSection = () => {
     },
     {
       id: "makeup",
-      src: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/Galllery_Treatment section images/Makeup Gallery.png",
       alt: "Professionelles Make-up",
       title: "Make-up",
       category: "Make-up",
@@ -65,7 +71,7 @@ export const TreatmentsSection = () => {
     },
     {
       id: "hautberatung",
-      src: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/Galllery_Treatment section images/Skin Consultation Gallery.png",
       alt: "Hautanalyse und Beratung",
       title: "Hautberatung",
       category: "Beratung",
@@ -75,7 +81,7 @@ export const TreatmentsSection = () => {
     },
     {
       id: "schminkkurs",
-      src: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/images/Galllery_Treatment section images/Makeup Course Gallery.png",
       alt: "Schminkkurs - Lernen Sie professionelle Techniken",
       title: "Schminkkurs",
       category: "Kurse",
@@ -95,37 +101,37 @@ export const TreatmentsSection = () => {
     {
       id: "aquafacial",
       title: "Aquafacial Behandlung",
-      image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1280&q=80",
+      image: "/images/hero_section/aquafacial tretment.png",
       link: "contact"
     },
     {
       id: "gesichtsbehandlungen",
       title: "Gesichtsbehandlungen",
-      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1280&q=80",
+      image: "/images/hero_section/Facial Treatments.png",
       link: "contact"
     },
     {
       id: "microneedling",
       title: "Microneedling",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1280&q=80",
+      image: "/images/hero_section/Microneedeling.png",
       link: "contact"
     },
     {
       id: "makeup",
       title: "Make-up & Styling",
-      image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1280&q=80",
+      image: "/images/hero_section/Professional Makeup.png",
       link: "contact"
     },
     {
       id: "schminkkurse",
       title: "Schminkkurse",
-      image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1280&q=80",
+      image: "/images/hero_section/Makeup Courses.png",
       link: "contact"
     },
     {
       id: "hautpflege",
       title: "Hautpflege & Beratung",
-      image: "https://images.unsplash.com/photo-1594824804732-ca8db7d1457c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1280&q=80",
+      image: "/images/hero_section/Skin Consultation.png",
       link: "contact"
     }
   ];
@@ -136,18 +142,28 @@ export const TreatmentsSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-8">
-            <GradientText
+            <ShinyText
               className="beauty-title"
-              colors={["#E91E63", "#EC407A", "#F06292", "#F8BBD9", "#F5DEB3", "#DEB887"]}
-              animationSpeed={6}
+              speed={8}
             >
-              Kosmetikstudio Hafidas Beautyroom in Frankfurt
-            </GradientText>
+              <GradientText
+                className="beauty-title"
+                colors={["#E91E63", "#F06292", "#FFB6C1", "#F8BBD9", "#F5DEB3", "#DEB887"]}
+                animationSpeed={6}
+              >
+                Kosmetikstudio Hafidas Beautyroom in Frankfurt
+              </GradientText>
+            </ShinyText>
           </h2>
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg leading-relaxed mb-8 text-black font-medium">
+            <BlurText
+              className="text-lg leading-relaxed mb-8 text-black font-medium"
+              animateBy="words"
+              delay={100}
+              threshold={0.2}
+            >
               Willkommen bei Hafidas Beautyroom - Ihrer persönlichen Beauty-Auszeit! Ich bin leidenschaftliche Kosmetikerin mit Herz und Seele, spezialisiert auf Hautpflege, Make-up und individuelle Beratung.
-            </p>
+            </BlurText>
 
           </div>
         </div>
@@ -156,18 +172,28 @@ export const TreatmentsSection = () => {
         <div className="mt-16">
           <div className="text-center mb-10">
             <h3 className="font-display text-3xl md:text-4xl font-bold mb-6">
-              <GradientText
-                className="beauty-title"
-                colors={["#E91E63", "#EC407A", "#F06292", "#F8BBD9", "#F5DEB3", "#DEB887"]}
-                animationSpeed={8}
+              <ShinyText
+                className="beauty-subtitle"
+                speed={6}
               >
-                Meine Spezialisierungen
-              </GradientText>
+                <GradientText
+                  className="beauty-title"
+                  colors={["#E91E63", "#F06292", "#FFB6C1", "#F8BBD9", "#F5DEB3", "#DEB887"]}
+                  animationSpeed={8}
+                >
+                  Meine Spezialisierungen
+                </GradientText>
+              </ShinyText>
             </h3>
-            <p className="text-lg leading-relaxed max-w-3xl mx-auto text-black font-medium">
+            <BlurText
+              className="text-lg leading-relaxed max-w-3xl mx-auto text-black font-medium"
+              animateBy="words"
+              delay={80}
+              threshold={0.3}
+            >
               Schauen Sie sich meine Behandlungsvielfalt an und finden Sie die perfekte Pflege für Ihre Bedürfnisse.
               Jede Behandlung wird individuell auf Sie abgestimmt.
-            </p>
+            </BlurText>
           </div>
 
           {/* Masonry Gallery */}
@@ -181,24 +207,83 @@ export const TreatmentsSection = () => {
             />
           </div>
 
-          {/* Call to Action */}
-          <div className="text-center mt-10">
-            <p className="text-lg text-gray-600 mb-6">
-              Interessiert an einer unserer Behandlungen?
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => {
-                  const element = document.getElementById('contact');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                className="bg-gradient-to-r from-primary to-accent text-white hover:shadow-lg px-8 py-3 rounded-apple text-apple-headline transition-all duration-300 hover:-translate-y-1"
-              >
-                Beratungstermin vereinbaren
-              </button>
+          {/* Enhanced Commercial CTA Section */}
+          <div className="text-center mt-16 mb-8">
+            {/* Dynamic Rotating Text */}
+            <div className="mb-6">
+              <RotatingText
+                texts={[
+                  "Interessiert an einer unserer Behandlungen?",
+                  "Bereit für Ihre Beauty-Transformation?",
+                  "Möchten Sie sich verwöhnen lassen?",
+                  "Zeit für professionelle Hautpflege?"
+                ]}
+                className="beauty-cta text-lg text-gray-600"
+                rotationInterval={3000}
+                transition={{ type: "spring", damping: 20, stiffness: 200 }}
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -20, opacity: 0 }}
+              />
             </div>
+
+            {/* Statistics Row */}
+            <div className="flex justify-center items-center gap-8 mb-8 text-sm text-gray-500">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-primary rounded-full"></span>
+                <CountUp to={500} duration={2} className="font-semibold text-primary" />
+                <span>+ zufriedene Kunden</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-accent rounded-full"></span>
+                <CountUp to={8} duration={1.5} className="font-semibold text-accent" />
+                <span>Jahre Erfahrung</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-secondary rounded-full"></span>
+                <CountUp to={15} duration={1.8} className="font-semibold text-secondary" />
+                <span>+ Behandlungen</span>
+              </div>
+            </div>
+
+            {/* Enhanced Button with Magnet and Glare Effects */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Magnet
+                padding={80}
+                magnetStrength={3}
+                activeTransition="transform 0.2s ease-out"
+                inactiveTransition="transform 0.4s ease-in-out"
+              >
+                <GlareHoverEffect
+                  background="linear-gradient(135deg, #E91E63, #EC407A)"
+                  borderColor="rgba(255, 255, 255, 0.3)"
+                  borderRadius="12px"
+                  glareColor="#ffffff"
+                  glareOpacity={0.7}
+                  glareAngle={-45}
+                  glareSize={200}
+                  transitionDuration={600}
+                  className="beauty-button"
+                >
+                  <button
+                    onClick={() => {
+                      const element = document.getElementById('contact');
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                    className="bg-transparent text-white font-semibold px-8 py-3 text-base tracking-wide transition-all duration-300 relative z-10"
+                  >
+                    Beratungstermin vereinbaren
+                  </button>
+                </GlareHoverEffect>
+              </Magnet>
+            </div>
+
+            {/* Subtle Call-to-Action Text */}
+            <p className="text-xs text-gray-400 mt-4 max-w-md mx-auto">
+              Kostenlose Beratung • Individuelle Behandlungspläne • Professionelle Hautanalyse
+            </p>
           </div>
         </div>
 

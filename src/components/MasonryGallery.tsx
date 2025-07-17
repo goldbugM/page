@@ -1,5 +1,6 @@
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import "./MasonryGallery.css";
+import BlurText from "../react-bits/BlurText";
 
 interface MasonryItem {
   id: string;
@@ -136,10 +137,26 @@ export const MasonryGallery: React.FC<MasonryGalleryProps> = ({
                     <span className="masonry-category">{item.category}</span>
                   )}
                   {item.title && (
-                    <h3 className="masonry-title">{item.title}</h3>
+                    <BlurText
+                      className="masonry-title"
+                      animateBy="words"
+                      delay={150 + (index * 50)}
+                      threshold={0.3}
+                      stepDuration={0.4}
+                    >
+                      {item.title}
+                    </BlurText>
                   )}
                   {item.description && (
-                    <p className="masonry-description">{item.description}</p>
+                    <BlurText
+                      className="masonry-description"
+                      animateBy="words"
+                      delay={100 + (index * 40)}
+                      threshold={0.4}
+                      stepDuration={0.3}
+                    >
+                      {item.description}
+                    </BlurText>
                   )}
                   {item.serviceId && onServiceClick && (
                     <button

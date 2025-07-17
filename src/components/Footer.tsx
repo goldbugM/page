@@ -9,7 +9,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-primary/30 to-accent/30 text-white py-4">
+    <footer className="bg-gradient-to-br from-primary/95 via-accent/90 to-secondary/85 backdrop-blur-sm text-white py-4">
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-3 gap-4 mb-3">
@@ -22,7 +22,7 @@ export const Footer = () => {
               {/* Logo */}
               <div className="w-10 h-10 transition-all duration-300">
                 <img
-                  src="/output.png"
+                  src="/images/hero_section/logo.png"
                   alt="Hafidas Beautyroom Logo"
                   className="w-full h-full object-contain drop-shadow-lg group-hover:scale-110 transition-transform duration-300"
                   onError={(e) => {

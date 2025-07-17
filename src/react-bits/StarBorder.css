@@ -1,0 +1,84 @@
+.star-border-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.border-gradient-bottom,
+.border-gradient-top {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  background-size: 200% 100%;
+  animation: star-border-animation linear infinite;
+}
+
+.border-gradient-bottom {
+  bottom: 0;
+  animation-direction: normal;
+}
+
+.border-gradient-top {
+  top: 0;
+  animation-direction: reverse;
+}
+
+.inner-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes star-border-animation {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Beauty spa specific styling */
+.star-border-container.beauty-button {
+  border-radius: 12px;
+}
+
+.star-border-container.beauty-button .border-gradient-bottom,
+.star-border-container.beauty-button .border-gradient-top {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8), transparent 15%);
+  height: 2px;
+}
+
+.star-border-container.beauty-button:hover .border-gradient-bottom,
+.star-border-container.beauty-button:hover .border-gradient-top {
+  background: radial-gradient(circle, rgba(255, 255, 255, 1), transparent 20%);
+  height: 3px;
+}
+
+/* Subtle glow effect */
+.star-border-container.beauty-button::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(45deg, 
+    rgba(233, 30, 99, 0.3), 
+    rgba(236, 64, 122, 0.3), 
+    rgba(240, 98, 146, 0.3)
+  );
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.star-border-container.beauty-button:hover::before {
+  opacity: 1;
+}

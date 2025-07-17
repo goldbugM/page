@@ -45,7 +45,7 @@
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 100%);
     --gradient-rose: linear-gradient(135deg, hsl(340 60% 65%) 0%, hsl(25 50% 85%) 100%);
     --gradient-hero: linear-gradient(135deg, hsl(340 55% 55% / 0.9) 0%, hsl(340 50% 45% / 0.8) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(340 10% 98%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--primary) / 0.95) 0%, hsl(var(--accent) / 0.90) 50%, hsl(var(--secondary) / 0.85) 100%);
 
     /* Elegant Shadows */
     --shadow-soft: 0 4px 20px hsl(340 55% 55% / 0.1);

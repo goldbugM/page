@@ -38,8 +38,7 @@ export const SocialMediaBanner: React.FC<SocialMediaBannerProps> = ({
                 onClick={handleInstagramClick}
                 className="social-btn-content"
               >
-                <Instagram className="h-5 w-5" />
-                <span>Instagram</span>
+                <Instagram className="h-6 w-6" />
               </button>
             </GlareHover>
             <GlareHover
@@ -51,8 +50,7 @@ export const SocialMediaBanner: React.FC<SocialMediaBannerProps> = ({
                 onClick={handleFacebookClick}
                 className="social-btn-content"
               >
-                <Facebook className="h-5 w-5" />
-                <span>Facebook</span>
+                <Facebook className="h-6 w-6" />
               </button>
             </GlareHover>
             <GlareHover
@@ -64,8 +62,7 @@ export const SocialMediaBanner: React.FC<SocialMediaBannerProps> = ({
                 onClick={handleWhatsAppClick}
                 className="social-btn-content"
               >
-                <MessageCircle className="h-5 w-5" />
-                <span>WhatsApp</span>
+                <MessageCircle className="h-6 w-6" />
               </button>
             </GlareHover>
           </div>

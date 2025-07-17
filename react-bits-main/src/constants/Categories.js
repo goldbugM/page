@@ -1,5 +1,5 @@
 // Highlighted sidebar items
-export const NEW = ['Silk', 'Scramble Text', 'Dot Grid', 'Beams', 'Chroma Grid', 'Glare Hover', 'Profile Card', 'Card Swap', 'Model Viewer', 'Fluid Glass', 'Cubes', 'Masonry', 'Text Trail'];
+export const NEW = ['Fluid Glass', 'Cubes', 'Masonry', 'Text Trail', 'Curved Loop', 'Magic Bento', 'Ripple Grid', 'Scroll Stack'];
 export const UPDATED = ['Split Text', 'Star Border'];
 
 // Used for main sidebar navigation
@@ -12,6 +12,7 @@ export const CATEGORIES = [
       'Circular Text',
       'Shiny Text',
       'Text Pressure',
+      'Curved Loop',
       'Fuzzy Text',
       'Gradient Text',
       'Text Trail',
@@ -27,7 +28,7 @@ export const CATEGORIES = [
       'Glitch Text',
       'Scroll Velocity',
       'Variable Proximity',
-      'Count Up'
+      'Count Up',
     ]
   },
   {
@@ -57,6 +58,9 @@ export const CATEGORIES = [
     name: 'Components',
     subcategories: [
       'Animated List',
+      'Scroll Stack',
+      'Magic Bento',
+      'Circular Gallery',
       'Stack',
       'Fluid Glass',
       'Tilted Card',
@@ -69,7 +73,6 @@ export const CATEGORIES = [
       'Dock',
       'Gooey Nav',
       'Pixel Card',
-      'Circular Gallery',
       'Carousel',
       'Spotlight Card',
       'Flying Posters',
@@ -95,6 +98,7 @@ export const CATEGORIES = [
       'Lightning',
       'Balatro',
       'Dither',
+      'Ripple Grid',
       'Shape Blur',
       'Dot Grid',
       'Threads',

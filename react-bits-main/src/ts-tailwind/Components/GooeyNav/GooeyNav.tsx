@@ -31,6 +31,7 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
   const filterRef = useRef<HTMLSpanElement>(null);
   const textRef = useRef<HTMLSpanElement>(null);
   const [activeIndex, setActiveIndex] = useState<number>(initialActiveIndex);
+
   const noise = (n = 1) => n / 2 - Math.random() * n;
   const getXY = (
     distance: number,
@@ -106,7 +107,10 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
     Object.assign(textRef.current.style, styles);
     textRef.current.innerText = element.innerText;
   };
-  const handleClick = (e: React.MouseEvent<HTMLLIElement>, index: number) => {
+  const handleClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    index: number
+  ) => {
     const liEl = e.currentTarget;
     if (activeIndex === index) return;
     setActiveIndex(index);
@@ -133,7 +137,9 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
       const liEl = e.currentTarget.parentElement;
       if (liEl) {
         handleClick(
-          { currentTarget: liEl } as React.MouseEvent<HTMLLIElement>,
+          {
+            currentTarget: liEl,
+          } as React.MouseEvent<HTMLAnchorElement>,
           index
         );
       }
@@ -317,15 +323,15 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
             {items.map((item, index) => (
               <li
                 key={index}
-                className={`py-[0.6em] px-[1em] rounded-full relative cursor-pointer transition-[background-color_color_box-shadow] duration-300 ease shadow-[0_0_0.5px_1.5px_transparent] text-white ${
+                className={`rounded-full relative cursor-pointer transition-[background-color_color_box-shadow] duration-300 ease shadow-[0_0_0.5px_1.5px_transparent] text-white ${
                   activeIndex === index ? "active" : ""
                 }`}
-                onClick={(e) => handleClick(e, index)}
               >
                 <a
                   href={item.href}
+                  onClick={(e) => handleClick(e, index)}
                   onKeyDown={(e) => handleKeyDown(e, index)}
-                  className="outline-none"
+                  className="outline-none py-[0.6em] px-[1em] inline-block"
                 >
                   {item.label}
                 </a>

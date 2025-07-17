@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { X, Eye, Sparkles } from "lucide-react";
-import beforeAfterAcne from "@/assets/before-after-acne.jpg";
-import beforeAfterHydration from "@/assets/before-after-hydration.jpg";
-import beforeAfterPores from "@/assets/before-after-pores.jpg";
-import beforeAfterPigmentation from "@/assets/before-after-pigmentation.jpg";
-import beforeAfterRejuvenation from "@/assets/before-after-rejuvenation.jpg";
-import beforeAfter from "@/assets/before-after.jpg";
+// Using local images from the images folder
+const beforeAfterAcne = "/images/BeforeAfter Treatment Results/Acne Treatment Results.png";
+const beforeAfterHydration = "/images/BeforeAfter Treatment Results/Hydration Treatment.png";
+const beforeAfterPores = "/images/BeforeAfter Treatment Results/Pore Refinement.png";
+const beforeAfterPigmentation = "/images/BeforeAfter Treatment Results/Pigmentation Treatment.png";
+const beforeAfterRejuvenation = "/images/BeforeAfter Treatment Results/Skin Rejuvenation.png";
+const beforeAfter = "/images/BeforeAfter Treatment Results/General BeforeAfter.png";
 
 export const BeforeAfterBubbleGallery = () => {
   const [isOpen, setIsOpen] = useState(false);

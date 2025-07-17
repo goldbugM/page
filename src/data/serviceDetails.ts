@@ -22,31 +22,31 @@ export const serviceDetails = {
         step: 1,
         title: "Reinigung & Peeling",
         description: "Sanfte Entfernung abgestorbener Hautzellen und Oberflächenunreinheiten",
-        image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Aquafacial Service Detail Images/Image 1 - Treatment Process.png"
       },
       {
         step: 2,
         title: "Extraktion",
         description: "Schmerzfreie Entfernung von Mitessern und Unreinheiten aus den Poren",
-        image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Aquafacial Service Detail Images/Image 2 - Equipment Detail.png"
       },
       {
         step: 3,
         title: "Hydratation",
         description: "Intensive Versorgung mit Hyaluronsäure und Antioxidantien",
-        image: "https://images.unsplash.com/photo-1594824804732-ca8db7d1457c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Aquafacial Service Detail Images/Image 3 - ResultsAftercare.png"
       },
       {
         step: 4,
         title: "Schutz & Pflege",
         description: "Abschließende Versiegelung mit pflegenden Seren und Sonnenschutz",
-        image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Aquafacial Service Detail Images/Image 1 - Treatment Process.png"
       }
     ],
     images: [
-      "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1594824804732-ca8db7d1457c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "/images/SERVICE DETAIL MODAL IMAGES/Aquafacial Service Detail Images/Image 1 - Treatment Process.png",
+      "/images/SERVICE DETAIL MODAL IMAGES/Aquafacial Service Detail Images/Image 2 - Equipment Detail.png",
+      "/images/SERVICE DETAIL MODAL IMAGES/Aquafacial Service Detail Images/Image 3 - ResultsAftercare.png"
     ],
     suitableFor: [
       "Alle Hauttypen",
@@ -87,31 +87,31 @@ export const serviceDetails = {
         step: 1,
         title: "Hautanalyse",
         description: "Professionelle Bestimmung Ihres Hauttyps und der Hautbedürfnisse",
-        image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Gesichtsbehandlung Service Detail Images/Image 1 - Cleansing.png"
       },
       {
         step: 2,
         title: "Reinigung",
         description: "Gründliche Entfernung von Make-up und Unreinheiten",
-        image: "https://images.unsplash.com/photo-1594824804732-ca8db7d1457c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Gesichtsbehandlung Service Detail Images/Image 1 - Cleansing.png"
       },
       {
         step: 3,
         title: "Peeling & Ausreinigung",
         description: "Sanftes Peeling und professionelle Ausreinigung der Poren",
-        image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Gesichtsbehandlung Service Detail Images/Image 2 - Mask Application.png"
       },
       {
         step: 4,
         title: "Maske & Pflege",
         description: "Entspannende Maske und abschließende Pflege mit hochwertigen Produkten",
-        image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Gesichtsbehandlung Service Detail Images/Image 3 - Final Care.png"
       }
     ],
     images: [
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1594824804732-ca8db7d1457c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "/images/SERVICE DETAIL MODAL IMAGES/Gesichtsbehandlung Service Detail Images/Image 1 - Cleansing.png",
+      "/images/SERVICE DETAIL MODAL IMAGES/Gesichtsbehandlung Service Detail Images/Image 2 - Mask Application.png",
+      "/images/SERVICE DETAIL MODAL IMAGES/Gesichtsbehandlung Service Detail Images/Image 3 - Final Care.png"
     ],
     suitableFor: [
       "Alle Hauttypen",
@@ -147,31 +147,31 @@ export const serviceDetails = {
         step: 1,
         title: "Vorbereitung",
         description: "Gründliche Reinigung und Desinfektion der Behandlungszone",
-        image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Microneedling Service Detail Images/Image 1 - Preparation.png"
       },
       {
         step: 2,
         title: "Microneedling",
         description: "Präzise Behandlung mit sterilen Mikronadeln",
-        image: "https://images.unsplash.com/photo-1594824804732-ca8db7d1457c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Microneedling Service Detail Images/Image 2 - Treatment Process.png"
       },
       {
         step: 3,
         title: "Wirkstoff-Ampulle",
         description: "Einarbeitung hochwirksamer Seren für optimale Ergebnisse",
-        image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Microneedling Service Detail Images/Image 3 - Serum Application.png"
       },
       {
         step: 4,
         title: "Beruhigende Maske",
         description: "Abschließende beruhigende und pflegende Maske",
-        image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Microneedling Service Detail Images/Image 3 - Serum Application.png"
       }
     ],
     images: [
-      "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1594824804732-ca8db7d1457c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "/images/SERVICE DETAIL MODAL IMAGES/Microneedling Service Detail Images/Image 1 - Preparation.png",
+      "/images/SERVICE DETAIL MODAL IMAGES/Microneedling Service Detail Images/Image 2 - Treatment Process.png",
+      "/images/SERVICE DETAIL MODAL IMAGES/Microneedling Service Detail Images/Image 3 - Serum Application.png"
     ],
     suitableFor: [
       "Reife Haut",
@@ -214,31 +214,31 @@ export const serviceDetails = {
         step: 1,
         title: "Beratung & Analyse",
         description: "Bestimmung Ihres Typs und Ihrer Wünsche für den perfekten Look",
-        image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Make-up Service Detail Images/Image 1 - Preparation.png"
       },
       {
         step: 2,
         title: "Hautvorbereitung",
         description: "Optimale Vorbereitung der Haut für ein makelloses Make-up",
-        image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Make-up Service Detail Images/Image 1 - Preparation.png"
       },
       {
         step: 3,
         title: "Make-up Anwendung",
         description: "Professionelle Anwendung von Foundation, Augen- und Lippen-Make-up",
-        image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Make-up Service Detail Images/Image 2 - Application Process.png"
       },
       {
         step: 4,
         title: "Finishing & Fixierung",
         description: "Abschließende Touches und Fixierung für langanhaltende Ergebnisse",
-        image: "https://images.unsplash.com/photo-1583001931096-959e9a1a6223?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Make-up Service Detail Images/Image 3 - Final Result.png"
       }
     ],
     images: [
-      "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "/images/SERVICE DETAIL MODAL IMAGES/Make-up Service Detail Images/Image 1 - Preparation.png",
+      "/images/SERVICE DETAIL MODAL IMAGES/Make-up Service Detail Images/Image 2 - Application Process.png",
+      "/images/SERVICE DETAIL MODAL IMAGES/Make-up Service Detail Images/Image 3 - Final Result.png"
     ],
     suitableFor: [
       "Alle Hauttypen",
@@ -274,31 +274,31 @@ export const serviceDetails = {
         step: 1,
         title: "Theorie & Beratung",
         description: "Grundlagen des Make-ups und typgerechte Beratung",
-        image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Schminkkurs Service Detail Images/Image 1 - Learning Setup.png"
       },
       {
         step: 2,
         title: "Demonstration",
         description: "Ich zeige Ihnen Schritt für Schritt die richtige Technik",
-        image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Schminkkurs Service Detail Images/Image 2 - Hands-on Training.png"
       },
       {
         step: 3,
         title: "Praktische Übung",
         description: "Sie üben selbst unter meiner Anleitung",
-        image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Schminkkurs Service Detail Images/Image 2 - Hands-on Training.png"
       },
       {
         step: 4,
         title: "Tipps & Nachbesprechung",
         description: "Wertvolle Tipps für zu Hause und Produktempfehlungen",
-        image: "https://images.unsplash.com/photo-1583001931096-959e9a1a6223?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Schminkkurs Service Detail Images/Image 3 - Course Results.png"
       }
     ],
     images: [
-      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "/images/SERVICE DETAIL MODAL IMAGES/Schminkkurs Service Detail Images/Image 1 - Learning Setup.png",
+      "/images/SERVICE DETAIL MODAL IMAGES/Schminkkurs Service Detail Images/Image 2 - Hands-on Training.png",
+      "/images/SERVICE DETAIL MODAL IMAGES/Schminkkurs Service Detail Images/Image 3 - Course Results.png"
     ],
     suitableFor: [
       "Make-up Anfänger",
@@ -334,31 +334,31 @@ export const serviceDetails = {
         step: 1,
         title: "Hautanalyse",
         description: "Gründliche Untersuchung Ihrer Haut mit professionellen Geräten",
-        image: "https://images.unsplash.com/photo-1594824804732-ca8db7d1457c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Hautberatung Service Detail Images/Image 1 - Skin Analysis.png"
       },
       {
         step: 2,
         title: "Bedarfsermittlung",
         description: "Bestimmung Ihrer individuellen Hautbedürfnisse und Ziele",
-        image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Hautberatung Service Detail Images/Image 1 - Skin Analysis.png"
       },
       {
         step: 3,
         title: "Produktberatung",
         description: "Auswahl der optimalen Pflegeprodukte für Ihren Hauttyp",
-        image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Hautberatung Service Detail Images/Image 2 - Product Consultation.png"
       },
       {
         step: 4,
         title: "Pflegeroutine",
         description: "Erstellung Ihrer persönlichen Pflegeroutine für zu Hause",
-        image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "/images/SERVICE DETAIL MODAL IMAGES/Hautberatung Service Detail Images/Image 3 - Care Plan.png"
       }
     ],
     images: [
-      "https://images.unsplash.com/photo-1594824804732-ca8db7d1457c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "/images/SERVICE DETAIL MODAL IMAGES/Hautberatung Service Detail Images/Image 1 - Skin Analysis.png",
+      "/images/SERVICE DETAIL MODAL IMAGES/Hautberatung Service Detail Images/Image 2 - Product Consultation.png",
+      "/images/SERVICE DETAIL MODAL IMAGES/Hautberatung Service Detail Images/Image 3 - Care Plan.png"
     ],
     suitableFor: [
       "Alle Hauttypen",

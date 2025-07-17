@@ -4,6 +4,9 @@ import { Menu, X } from "lucide-react";
 import { BookingModal } from "./BookingModal";
 import { PromoBanner } from "./PromoBanner";
 
+import StarBorder from "../react-bits/StarBorder";
+import Magnet from "../react-bits/Magnet";
+
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -51,10 +54,16 @@ export const Header = () => {
           isScrolled ? 'py-2' : 'py-3'
         }`}>
           {/* Logo and Brand */}
-          <button
-            onClick={() => scrollToSection('home')}
-            className="flex items-center space-x-3 hover:opacity-90 transition-all duration-300 group"
+          <Magnet
+            padding={60}
+            magnetStrength={4}
+            activeTransition="transform 0.2s ease-out"
+            inactiveTransition="transform 0.3s ease-in-out"
           >
+            <button
+              onClick={() => scrollToSection('home')}
+              className="flex items-center space-x-3 hover:opacity-90 transition-all duration-300 group"
+            >
             {/* Logo */}
             <div className={`relative transition-all duration-300 ${
               isScrolled ? 'w-14 h-14' : 'w-16 h-16'
@@ -62,7 +71,7 @@ export const Header = () => {
               <div className="w-full h-full transition-all duration-300">
                 {/* Logo Image */}
                 <img
-                  src="/output.png"
+                  src="/images/hero_section/logo.png"
                   alt="Hafidas Beautyroom Logo"
                   className="w-full h-full object-contain drop-shadow-lg"
                   onError={(e) => {
@@ -101,7 +110,8 @@ export const Header = () => {
                 Beauty & Wellness
               </span>
             </div>
-          </button>
+            </button>
+          </Magnet>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:block">
@@ -109,7 +119,7 @@ export const Header = () => {
               {[
                 { label: 'Home', id: 'home' },
                 { label: 'Behandlungen', id: 'treatments' },
-                { label: 'Studio', id: 'about' },
+                { label: 'Studio', id: 'studio' },
                 { label: 'Kontakt', id: 'contact' }
               ].map((item) => (
                 <li key={item.id}>
@@ -131,16 +141,24 @@ export const Header = () => {
 
               {/* CTA Button in Navigation */}
               <li className="ml-4">
-                <button
-                  onClick={() => setIsBookingModalOpen(true)}
-                  className={`px-6 py-2 rounded-apple text-apple-caption transition-all duration-300 hover:scale-105 ${
-                    isScrolled
-                      ? 'bg-white/30 text-white hover:bg-white/40 backdrop-blur-sm border border-white/50 drop-shadow-lg'
-                      : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm border border-white/30'
-                  }`}
+                <StarBorder
+                  as="div"
+                  color="rgba(255, 255, 255, 0.8)"
+                  speed="4s"
+                  thickness={2}
+                  className="beauty-button"
                 >
-                  Termin buchen
-                </button>
+                  <button
+                    onClick={() => setIsBookingModalOpen(true)}
+                    className={`px-6 py-2 rounded-apple text-apple-caption transition-all duration-300 hover:scale-105 ${
+                      isScrolled
+                        ? 'bg-white/30 text-white hover:bg-white/40 backdrop-blur-sm border border-white/50 drop-shadow-lg'
+                        : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm border border-white/30'
+                    }`}
+                  >
+                    Termin buchen
+                  </button>
+                </StarBorder>
               </li>
             </ul>
           </nav>
@@ -169,7 +187,7 @@ export const Header = () => {
               {[
                 { label: 'Home', id: 'home' },
                 { label: 'Behandlungen', id: 'treatments' },
-                { label: 'Studio', id: 'about' },
+                { label: 'Studio', id: 'studio' },
                 { label: 'Kontakt', id: 'contact' }
               ].map((item) => (
                 <li key={item.id}>
@@ -195,7 +213,7 @@ export const Header = () => {
                     setIsBookingModalOpen(true);
                     setIsMobileMenuOpen(false);
                   }}
-                  className="w-full bg-gradient-to-r from-primary to-accent text-white px-6 py-3 rounded-apple text-apple-caption hover:shadow-lg transition-all duration-300 hover:scale-105"
+                  className="w-full bg-gradient-to-br from-primary/95 via-accent/90 to-secondary/85 text-white px-6 py-3 rounded-apple text-apple-caption hover:shadow-lg transition-all duration-300 hover:scale-105 border border-white/30"
                 >
                   Termin buchen
                 </button>
@@ -211,6 +229,8 @@ export const Header = () => {
           onClose={() => setIsBookingModalOpen(false)}
         />
       </header>
+
+
     </>
   );
 };

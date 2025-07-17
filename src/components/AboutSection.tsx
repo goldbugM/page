@@ -13,7 +13,7 @@ export const AboutSection = () => {
 
 
   return (
-    <section id="about" className="py-20 bg-white relative overflow-hidden">
+    <section id="about" className="py-20 bg-unified-rose relative overflow-hidden">
       {/* Modern Background Elements */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl" />

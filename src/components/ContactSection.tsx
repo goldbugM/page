@@ -382,7 +382,7 @@ export const ContactSection = () => {
     }
   };
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20">
       <style>
         {`
           .magical-contact-card {
@@ -461,12 +461,12 @@ export const ContactSection = () => {
         <div className="grid lg:grid-cols-3 gap-8 items-start">
           {/* Contact Form */}
           <FadeContent blur={true} duration={800} delay={100} className="lg:col-span-2">
-            <MagicalContactCard className="group relative bg-gradient-to-br from-primary/95 via-accent/90 to-secondary/85 backdrop-blur-md rounded-2xl p-8 border border-white/30 hover:border-white/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 overflow-hidden">
+            <MagicalContactCard className="group relative bg-gradient-to-br from-primary/95 via-accent/90 to-secondary/85 backdrop-blur-md rounded-2xl p-6 border border-white/30 hover:border-white/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 overflow-hidden">
               <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-accent/30 to-transparent rounded-bl-2xl" />
               <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-primary/30 to-transparent rounded-tr-2xl" />
               <div className="w-3 h-3 bg-gradient-to-r from-accent to-primary rounded-full mb-6 shadow-lg shadow-accent/50 animate-pulse" />
 
-              <h3 className="font-bold text-white mb-6 text-xl tracking-wide">NACHRICHT SENDEN</h3>
+              <h3 className="font-bold text-white mb-4 text-xl tracking-wide">NACHRICHT SENDEN</h3>
 
             {showSuccess ? (
               <div className="text-center py-8">
@@ -483,8 +483,8 @@ export const ContactSection = () => {
                 </Button>
               </div>
             ) : (
-              <form onSubmit={handleFormSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+              <form onSubmit={handleFormSubmit} className="space-y-4">
+                <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="contact-name" className="text-base font-medium text-white">
                       Vollständiger Name *
@@ -556,7 +556,7 @@ export const ContactSection = () => {
                     value={formData.message}
                     onChange={(e) => handleInputChange('message', e.target.value)}
                     className="mt-2"
-                    rows={8}
+                    rows={5}
                     placeholder="Teilen Sie uns mit, wie wir Ihnen helfen können..."
                     required
                   />
@@ -642,7 +642,7 @@ export const ContactSection = () => {
 
             {/* Aligned Map */}
             <MagicalContactCard className="group relative bg-gradient-to-br from-primary/95 via-accent/90 to-secondary/85 backdrop-blur-md rounded-2xl border border-white/30 hover:border-white/50 transition-all duration-500 hover:shadow-2xl overflow-hidden">
-              <div className="h-80 relative">
+              <div className="h-72 relative">
                 <LazyGoogleMap />
               </div>
             </MagicalContactCard>

@@ -9,8 +9,8 @@ import ScrollReveal from "../react-bits/ScrollReveal";
 import StarBorder from "../react-bits/StarBorder";
 import { gsap } from "gsap";
 
-// Magical Bento Effects for Studio Cards
-const DEFAULT_PARTICLE_COUNT = 6;
+// Enhanced Magical Bento Effects for Studio Cards (ContactSection-inspired)
+const DEFAULT_PARTICLE_COUNT = 8; // Increased from 6 to 8
 const DEFAULT_GLOW_COLOR = "219, 39, 119"; // Pink color matching the theme
 
 const createParticleElement = (
@@ -55,9 +55,9 @@ const MagicalStudioCard: React.FC<{
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
 
-      // Subtle tilt effect
-      const rotateX = ((y - centerY) / centerY) * -3;
-      const rotateY = ((x - centerX) / centerX) * 3;
+      // Enhanced tilt effect (ContactSection-inspired)
+      const rotateX = ((y - centerY) / centerY) * -5; // Increased from -3 to -5
+      const rotateY = ((x - centerX) / centerX) * 5;  // Increased from 3 to 5
 
       gsap.to(card, {
         rotateX,
@@ -67,10 +67,10 @@ const MagicalStudioCard: React.FC<{
         transformPerspective: 1000,
       });
 
-      // Update glow position
+      // Enhanced glow position (ContactSection-inspired)
       card.style.setProperty('--glow-x', `${(x / rect.width) * 100}%`);
       card.style.setProperty('--glow-y', `${(y / rect.height) * 100}%`);
-      card.style.setProperty('--glow-intensity', '0.2');
+      card.style.setProperty('--glow-intensity', '0.3'); // Increased from 0.2 to 0.3
     };
 
     const handleMouseLeave = () => {
@@ -98,7 +98,7 @@ const MagicalStudioCard: React.FC<{
         particlesRef.current.push(particle);
 
         const angle = (i / DEFAULT_PARTICLE_COUNT) * Math.PI * 2;
-        const distance = 20 + Math.random() * 15;
+        const distance = 30 + Math.random() * 20; // Enhanced distance (ContactSection-inspired)
         const targetX = x + Math.cos(angle) * distance;
         const targetY = y + Math.sin(angle) * distance;
 
@@ -107,7 +107,7 @@ const MagicalStudioCard: React.FC<{
           y: targetY - y,
           opacity: 0,
           scale: 0,
-          duration: 0.5,
+          duration: 0.6, // Increased from 0.5 to 0.6
           ease: "power2.out",
           onComplete: () => {
             if (particle.parentNode) {
@@ -161,7 +161,7 @@ export const StudioSection = () => {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 
   return (
-    <section id="studio" className="py-16 bg-white">
+    <section id="studio" className="py-16">
       <style>
         {`
           .magical-studio-card {
@@ -193,12 +193,12 @@ export const StudioSection = () => {
 
           .magical-studio-card:hover {
             box-shadow:
-              0 0 15px rgba(var(--glow-color), 0.08),
-              0 6px 25px rgba(0, 0, 0, 0.1);
+              0 0 20px rgba(var(--glow-color), 0.1),
+              0 8px 32px rgba(0, 0, 0, 0.12);
           }
 
           .particle {
-            animation: particle-float 0.5s ease-out forwards;
+            animation: particle-float 0.6s ease-out forwards;
           }
 
           @keyframes particle-float {
@@ -214,99 +214,79 @@ export const StudioSection = () => {
         `}
       </style>
       <div className="container mx-auto px-4">
-        {/* Header */}
+        {/* Enhanced Header (ContactSection-inspired) */}
         <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-              Über Hafida
-            </span>
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
+            <ShinyText
+              className="beauty-title"
+              speed={6}
+            >
+              <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+                Über Hafida
+              </span>
+            </ShinyText>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <BlurText
+            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            animateBy="words"
+            delay={100}
+            threshold={0.2}
+          >
             Ihre persönliche Beauty-Expertin mit Leidenschaft für natürliche Schönheit
-          </p>
+          </BlurText>
         </div>
 
-        {/* Biography Content */}
+        {/* Enhanced Biography Content (ContactSection-inspired) */}
         <div className="max-w-6xl mx-auto">
           {/* Main Biography Layout */}
           <div className="grid lg:grid-cols-5 gap-8">
-            {/* Left Side - Stacked Cards */}
-            <div className="lg:col-span-2 space-y-6">
-              {/* Expertise Card 1 */}
-              <MagicalStudioCard className="group relative bg-gradient-to-br from-primary/95 via-accent/90 to-secondary/85 backdrop-blur-md rounded-2xl p-6 border border-white/30 hover:border-white/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 overflow-hidden text-center">
-                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-accent/30 to-transparent rounded-bl-2xl" />
-                <div className="w-2 h-2 bg-gradient-to-r from-accent to-primary rounded-full mb-4 mx-auto shadow-lg shadow-accent/50 animate-pulse" />
-                <h4 className="font-bold text-white mb-3 text-lg tracking-wide">AUSBILDUNG & ZERTIFIKATE</h4>
+            {/* Left Side - Enhanced Stacked Cards */}
+            <FadeContent blur={true} duration={800} delay={100} className="lg:col-span-2 flex flex-col justify-between h-full">
+              {/* Enhanced Expertise Card 1 */}
+              <MagicalStudioCard className="group relative bg-gradient-to-br from-primary/95 via-accent/90 to-secondary/85 backdrop-blur-md rounded-xl p-4 border border-white/30 hover:border-white/50 transition-all duration-500 hover:shadow-xl hover:shadow-primary/20 overflow-hidden text-left flex flex-col justify-center mb-3">
+                <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-bl from-accent/30 to-transparent rounded-bl-xl" />
+                <div className="absolute bottom-0 left-0 w-10 h-10 bg-gradient-to-tr from-primary/30 to-transparent rounded-tr-xl" />
+                <h4 className="font-bold text-white mb-2 text-base tracking-wide">AUSBILDUNG & ZERTIFIKATE</h4>
                 <p className="text-white/90 text-sm leading-relaxed">
                   Staatlich geprüfte Kosmetikerin mit kontinuierlicher Weiterbildung
                 </p>
+                {/* Enhanced Hover Effect Line */}
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-accent to-primary group-hover:w-full transition-all duration-500" />
               </MagicalStudioCard>
 
-              {/* Expertise Card 2 */}
-              <MagicalStudioCard className="group relative bg-gradient-to-br from-primary/95 via-accent/90 to-secondary/85 backdrop-blur-md rounded-2xl p-6 border border-white/30 hover:border-white/50 transition-all duration-500 hover:shadow-2xl hover:shadow-accent/20 overflow-hidden text-center">
-                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-primary/30 to-transparent rounded-bl-2xl" />
-                <div className="w-2 h-2 bg-gradient-to-r from-primary to-accent rounded-full mb-4 mx-auto shadow-lg shadow-primary/50 animate-pulse" />
-                <h4 className="font-bold text-white mb-3 text-lg tracking-wide">SPEZIALISIERUNGEN</h4>
+              {/* Enhanced Expertise Card 2 */}
+              <MagicalStudioCard className="group relative bg-gradient-to-br from-primary/95 via-accent/90 to-secondary/85 backdrop-blur-md rounded-xl p-4 border border-white/30 hover:border-white/50 transition-all duration-500 hover:shadow-xl hover:shadow-accent/20 overflow-hidden text-left flex flex-col justify-center mb-3">
+                <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-bl from-primary/30 to-transparent rounded-bl-xl" />
+                <div className="absolute bottom-0 left-0 w-10 h-10 bg-gradient-to-tr from-accent/30 to-transparent rounded-tr-xl" />
+                <h4 className="font-bold text-white mb-2 text-base tracking-wide">SPEZIALISIERUNGEN</h4>
                 <p className="text-white/90 text-sm leading-relaxed">
                   Aquafacial, Anti-Aging, Problemhaut & Make-up
                 </p>
+                {/* Enhanced Hover Effect Line */}
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-500" />
               </MagicalStudioCard>
 
-              {/* Expertise Card 3 */}
-              <MagicalStudioCard className="group relative bg-gradient-to-br from-primary/95 via-accent/90 to-secondary/85 backdrop-blur-md rounded-2xl p-6 border border-white/30 hover:border-white/50 transition-all duration-500 hover:shadow-2xl hover:shadow-secondary/20 overflow-hidden text-center">
-                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-secondary/30 to-transparent rounded-bl-2xl" />
-                <div className="w-2 h-2 bg-gradient-to-r from-secondary to-primary rounded-full mb-4 mx-auto shadow-lg shadow-secondary/50 animate-pulse" />
-                <h4 className="font-bold text-white mb-3 text-lg tracking-wide">PHILOSOPHIE</h4>
+              {/* Enhanced Expertise Card 3 */}
+              <MagicalStudioCard className="group relative bg-gradient-to-br from-primary/95 via-accent/90 to-secondary/85 backdrop-blur-md rounded-xl p-4 border border-white/30 hover:border-white/50 transition-all duration-500 hover:shadow-xl hover:shadow-secondary/20 overflow-hidden text-left flex flex-col justify-center">
+                <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-bl from-secondary/30 to-transparent rounded-bl-xl" />
+                <div className="absolute bottom-0 left-0 w-10 h-10 bg-gradient-to-tr from-primary/30 to-transparent rounded-tr-xl" />
+                <h4 className="font-bold text-white mb-2 text-base tracking-wide">PHILOSOPHIE</h4>
                 <p className="text-white/90 text-sm leading-relaxed">
                   Natürliche Schönheit durch individuelle Pflege
                 </p>
+                {/* Enhanced Hover Effect Line */}
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-secondary to-primary group-hover:w-full transition-all duration-500" />
               </MagicalStudioCard>
 
-              {/* Call to Action Button */}
-              <Magnet wrapperClassName="w-full block">
-                <div className="relative w-full">
-                  {/* Shape Blur Effects */}
-                  <div className="absolute -inset-4 opacity-30 group-hover:opacity-50 transition-opacity duration-700">
-                    <div className="absolute top-0 left-1/4 w-8 h-8 bg-pink-400 rounded-full blur-xl animate-pulse" style={{ animationDelay: '0s' }} />
-                    <div className="absolute bottom-0 right-1/4 w-6 h-6 bg-rose-400 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1s' }} />
-                    <div className="absolute top-1/2 left-0 w-4 h-4 bg-pink-300 rounded-full blur-md animate-pulse" style={{ animationDelay: '2s' }} />
-                    <div className="absolute top-1/4 right-0 w-5 h-5 bg-rose-300 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1.5s' }} />
-                  </div>
 
-                  <GlareHoverEffect
-                    className="w-full relative z-10"
-                    glareColor="rgba(255, 255, 255, 0.4)"
-                    duration="2s"
-                  >
-                    <button
-                      className="group relative bg-gradient-to-br from-pink-400 to-rose-400 backdrop-blur-md rounded-2xl p-8 border border-pink-200/40 hover:border-pink-200/70 transition-all duration-700 hover:shadow-2xl hover:shadow-pink-400/30 hover:shadow-rose-400/20 overflow-hidden text-center cursor-pointer w-full hover:scale-[1.02] hover:-translate-y-1 transform-gpu min-h-[130px] flex flex-col justify-center"
-                      onClick={() => setIsBookingModalOpen(true)}
-                    >
-                    {/* Premium Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl" />
+            </FadeContent>
 
-                    {/* Corner Accent */}
-                    <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-pink-300/40 to-transparent rounded-bl-2xl group-hover:from-pink-300/60 transition-all duration-500" />
-
-                    {/* Animated Pulse Dot */}
-                    <div className="w-2 h-2 bg-gradient-to-r from-pink-300 to-rose-300 rounded-full mb-4 mx-auto shadow-lg shadow-pink-300/50 animate-pulse group-hover:shadow-pink-300/70 group-hover:scale-110 transition-all duration-300" />
-
-                    {/* Content */}
-                    <h4 className="font-bold text-white mb-3 text-lg tracking-wide group-hover:text-white/95 transition-colors duration-300">TERMIN VEREINBAREN</h4>
-                    <p className="text-white/90 text-sm leading-relaxed group-hover:text-white/95 transition-colors duration-300">
-                      Jetzt Ihren persönlichen Behandlungstermin buchen
-                    </p>
-
-                    {/* Hover Glow Effect */}
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-400/20 via-rose-400/20 to-pink-300/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
-                  </button>
-                </GlareHoverEffect>
-                </div>
-              </Magnet>
-            </div>
-
-            {/* Biography Content - Right Side */}
-            <MagicalStudioCard className="lg:col-span-3 bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+            {/* Enhanced Biography Content - Right Side */}
+            <FadeContent blur={true} duration={800} delay={400} className="lg:col-span-3">
+              <MagicalStudioCard className="group relative bg-white rounded-2xl p-8 border border-gray-100 shadow-sm overflow-hidden">
+                {/* Enhanced Corner Accents */}
+                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-primary/10 to-transparent rounded-bl-2xl" />
+                <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-accent/10 to-transparent rounded-tr-2xl" />
               <div className="space-y-8">
                 <div>
                   <h4 className="font-bold text-gray-800 mb-4 text-xl">Meine Leidenschaft</h4>
@@ -334,8 +314,11 @@ export const StudioSection = () => {
                     dermatologisch getesteten Produkten.
                   </p>
                 </div>
+                {/* Enhanced Hover Effect Line */}
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-500" />
               </div>
-            </MagicalStudioCard>
+              </MagicalStudioCard>
+            </FadeContent>
           </div>
         </div>
       </div>

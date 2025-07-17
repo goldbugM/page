@@ -50,7 +50,7 @@ export const FeaturedServicesSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Content */}

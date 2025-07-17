@@ -137,7 +137,7 @@ export const TreatmentsSection = () => {
   ];
 
   return (
-    <section id="treatments" className="py-20 bg-white">
+    <section id="treatments" className="py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

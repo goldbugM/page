@@ -4,12 +4,24 @@ import { useEffect, useState } from "react";
 import { ServiceDetailModal } from "./ServiceDetailModal";
 import { serviceDetails } from "../data/serviceDetails";
 import { GradientText } from "./GradientText";
+import { useIsMobile } from "../hooks/use-mobile";
 
 export const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedService, setSelectedService] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [imagesLoaded, setImagesLoaded] = useState<Set<string>>(new Set());
+  const isMobile = useIsMobile();
+
+  // Function to add hyphenation for mobile
+  const formatTitleForMobile = (title: string) => {
+    if (!isMobile) return title;
+
+    // Add soft hyphens for German word breaks
+    return title
+      .replace(/Gesichtsbehandlungen/g, 'Gesichts&shy;behandlungen')
+      .replace(/Gesichtsbehandlung/g, 'Gesichts&shy;behandlung');
+  };
 
   const openServiceModal = (serviceId: string) => {
     setSelectedService(serviceId);
@@ -152,7 +164,11 @@ export const HeroSection = () => {
                     colors={["#FFFFFF", "#FFB6C1", "#FFFFFF", "#FF69B4", "#FFFFFF"]}
                     animationSpeed={10}
                   >
-                    {service.title}
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: formatTitleForMobile(service.title)
+                      }}
+                    />
                   </GradientText>
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 opacity-90">

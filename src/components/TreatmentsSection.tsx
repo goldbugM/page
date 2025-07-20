@@ -19,6 +19,16 @@ export const TreatmentsSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const isMobile = useIsMobile();
 
+  // Function to add hyphenation for mobile
+  const formatTextForMobile = (text: string) => {
+    if (!isMobile) return text;
+
+    // Add soft hyphens for German word breaks
+    return text
+      .replace(/Gesichtsbehandlungen/g, 'Gesichts&shy;behandlungen')
+      .replace(/Gesichtsbehandlung/g, 'Gesichts&shy;behandlung');
+  };
+
   const openServiceModal = (serviceId: string) => {
     setSelectedService(serviceId);
     setIsModalOpen(true);
@@ -36,7 +46,7 @@ export const TreatmentsSection = () => {
       src: "/images/Galllery_Treatment section images/Aquafacial Gallery.png",
       alt: "Aquafacial Behandlung - Moderne Hydra-Dermabrasion",
       title: "Aquafacial Behandlung",
-      category: "Gesichtsbehandlung",
+      category: formatTextForMobile("Gesichtsbehandlung"),
       description: "Moderne Hydra-Dermabrasion für strahlende Haut",
       height: 260,
       serviceId: "aquafacial"
@@ -55,7 +65,7 @@ export const TreatmentsSection = () => {
       id: "gesichtsbehandlung",
       src: "/images/Galllery_Treatment section images/Facial Treatment Gallery.webp",
       alt: "Klassische Gesichtsbehandlung",
-      title: "Gesichtsbehandlung",
+      title: formatTextForMobile("Gesichtsbehandlung"),
       category: "Hautpflege",
       description: "Individuelle Hautpflege nach Ihren Bedürfnissen",
       height: 240,

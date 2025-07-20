@@ -345,3 +345,20 @@
     }
   }
 }
+
+/* Mobile Hyphenation Support */
+@layer utilities {
+  .mobile-hyphenate {
+    hyphens: auto;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  @media (max-width: 768px) {
+    .beauty-title {
+      hyphens: auto;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+  }
+}

@@ -137,15 +137,23 @@ export const MasonryGallery: React.FC<MasonryGalleryProps> = ({
                     <span className="masonry-category">{item.category}</span>
                   )}
                   {item.title && (
-                    <BlurText
-                      className="masonry-title"
-                      animateBy="words"
-                      delay={150 + (index * 50)}
-                      threshold={0.3}
-                      stepDuration={0.4}
-                    >
-                      {item.title}
-                    </BlurText>
+                    <div style={{
+                      wordWrap: 'break-word',
+                      overflowWrap: 'break-word',
+                      hyphens: 'auto',
+                      maxWidth: '100%',
+                      overflow: 'visible'
+                    }}>
+                      <BlurText
+                        className="masonry-title"
+                        animateBy="words"
+                        delay={150 + (index * 50)}
+                        threshold={0.3}
+                        stepDuration={0.4}
+                      >
+                        {item.title}
+                      </BlurText>
+                    </div>
                   )}
                   {item.description && (
                     <BlurText

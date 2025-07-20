@@ -6,9 +6,11 @@ import BlurText from "../react-bits/BlurText";
 import ShinyText from "../react-bits/ShinyText";
 import GlareHoverEffect from "../react-bits/GlareHover";
 import Magnet from "../react-bits/Magnet";
+import { useIsMobile } from "../hooks/use-mobile";
 
 export const AboutSection = () => {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+  const isMobile = useIsMobile();
 
 
 
@@ -65,6 +67,7 @@ export const AboutSection = () => {
                 magnetStrength={3}
                 activeTransition="transform 0.2s ease-out"
                 inactiveTransition="transform 0.4s ease-in-out"
+                disabled={isMobile}
               >
                 <GlareHoverEffect
                   background="linear-gradient(135deg, #E91E63, #EC407A)"

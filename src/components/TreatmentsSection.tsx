@@ -12,10 +12,12 @@ import GlareHoverEffect from "../react-bits/GlareHover";
 import Magnet from "../react-bits/Magnet";
 import RotatingText from "../react-bits/RotatingText";
 import CountUp from "../react-bits/CountUp";
+import { useIsMobile } from "../hooks/use-mobile";
 
 export const TreatmentsSection = () => {
   const [selectedService, setSelectedService] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   const openServiceModal = (serviceId: string) => {
     setSelectedService(serviceId);
@@ -253,6 +255,7 @@ export const TreatmentsSection = () => {
                 magnetStrength={3}
                 activeTransition="transform 0.2s ease-out"
                 inactiveTransition="transform 0.4s ease-in-out"
+                disabled={isMobile}
               >
                 <GlareHoverEffect
                   background="linear-gradient(135deg, #E91E63, #EC407A)"

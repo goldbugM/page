@@ -6,6 +6,7 @@ import { PromoBanner } from "./PromoBanner";
 
 import StarBorder from "../react-bits/StarBorder";
 import Magnet from "../react-bits/Magnet";
+import { useIsMobile } from "../hooks/use-mobile";
 
 
 export const Header = () => {
@@ -13,6 +14,7 @@ export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   const [isPromoBannerVisible, setIsPromoBannerVisible] = useState(true);
+  const isMobile = useIsMobile();
 
 
   useEffect(() => {
@@ -59,6 +61,7 @@ export const Header = () => {
             magnetStrength={4}
             activeTransition="transform 0.2s ease-out"
             inactiveTransition="transform 0.3s ease-in-out"
+            disabled={isMobile}
           >
             <button
               onClick={() => scrollToSection('home')}
